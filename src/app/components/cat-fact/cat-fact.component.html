@@ -1,0 +1,27 @@
+<!-- <div class="container-fluid mt-4">
+  <div class="row">
+    <div class="card mb-2">
+      <div class="card-header">Cat Fact</div>
+      <div class="card-body">
+        {{catFact.message}}
+      </div>
+      <div class="card-footer">Success: {{catFact.status}}</div>
+    </div>
+    <button class="btn btn-primary mt-2" (click)="fetchNewFact()">
+      New Fact
+    </button>
+  </div>
+</div> -->
+
+<div class="card" style="width: 18rem">
+  <img src="{{ catFact.message }}" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">
+     Image URL - <a href="{{catFact.message}}">{{catFact.message}}</a> 
+    </p>
+    <button class="btn btn-primary mt-2" (click)="fetchNewFact()">
+      Next
+    </button>
+  </div>
+</div>

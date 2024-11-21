@@ -1,0 +1,40 @@
+<div class="container-fluid mt-4">
+  <div row="row">
+    <div class="col-lg-12">
+      <div class="alert alert-secondary sort-bar">
+        <button
+          type="button"
+          class="btn btn-outline-success mx-2"
+          (click)="filterTodo('completed')"
+        >
+          Show Completed ({{ numComplete }})
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-danger mx-2"
+          (click)="filterTodo('in-complete')"
+        >
+          Show Incomplete ({{ numInComplete }})
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary mx-2"
+          (click)="filterTodo('reset')"
+        >
+          Reset All ({{ numTotal }})
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let t of todos">
+      <div class="card mb-2">
+        <div class="card-header">Created By user Id : {{ t.userId }}</div>
+        <div class="card-body">
+          {{ t.title }}
+        </div>
+        <div class="card-footer">Status : {{ t.completed }}</div>
+      </div>
+    </div>
+  </div>
+</div>
